@@ -10,6 +10,7 @@ MASQUEDIR=../
 # 16S analysis #
 ################
 # Even samples from MOCK communities
+#sample=SRR053818
 #sample=SRR072220
 #sample=SRR072239
 # Staggered samples from MOCK communities

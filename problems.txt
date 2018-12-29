@@ -1,0 +1,22 @@
+Problems I ran into when running MASQUE.
+
+Installation with Docker :
+	Link to the databases in the README is dead.
+
+Installation with Git
+	url_list.txt
+		Homo sapiens : p7 no more exists -> replaced it by p12
+		Danio rerio : GRCz10 no more exists -> replaced it by GRCz11
+		PhiX 174 : "Enterobacteria_phage" was renamed -> "enterobacteria_phage"
+
+	md5_check.txt
+		Since some data files from url_list.txt have changed, some md5 hashes are wrong.
+
+	install_databases.sh
+		makeblastdb : problem loading "libwritedb.so" when using the binary in ncbi-blast-2.5.0+/
+		
+	test/data/
+		Data are empty, need for downloading them.
+
+	AlienTrimmer
+		Need to run "JarMaker.sh" in AlienTrimmer directory.

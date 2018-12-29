@@ -1,0 +1,13 @@
+https://www.arb-silva.de/fileadmin/silva_databases/release_128/Exports/SILVA_128_LSURef_tax_silva.fasta.gz
+https://www.arb-silva.de/fileadmin/silva_databases/release_128/Exports/SILVA_128_SSURef_Nr99_tax_silva.fasta.gz
+ftp://greengenes.microbio.me/greengenes_release/gg_13_5/gg_13_5.fasta.gz
+ftp://greengenes.microbio.me/greengenes_release/gg_13_5/gg_13_5_taxonomy.txt.gz
+https://unite.ut.ee/sh_files/sh_general_release_s_20.11.2016.zip
+http://www.mothur.org/w/images/2/20/Findley_ITS_database.zip
+https://risccweb.csmc.edu/microbiome/thf/download/THFv1.3.sequence.fasta
+http://drive5.com/uchime/gold.fa
+ftp://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/Assembled_chromosomes/seq/hs_ref_GRCh38.p7_*.fa.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/Mus_musculus/Assembled_chromosomes/seq/mm_ref_GRCm38.p4_*.fa.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/Danio_rerio/Assembled_chromosomes/seq/dr_ref_GRCz10_*.fa.gz
+ftp://ftp.ncbi.nlm.nih.gov/sra/wgs_aux/AL/PR/ALPR02/ALPR02.1.fsa_nt.gz
+ftp://ftp.ncbi.nih.gov/genomes/Viruses/Enterobacteria_phage_phiX174_sensu_lato_uid14015/NC_001422.fna
