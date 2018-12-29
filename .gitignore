@@ -102,4 +102,8 @@ test/result/
 databases/
 tp/SRR*
 tp/mock_community*
+tp/nextflow/.nextflow*
+tp/nextflow/work/
+tp/nextflow/SRR*
+tp/nextflow/mock_community*
 

@@ -1,0 +1,7 @@
+#SampleID	Community
+SRR053818	Even
+SRR072220	Even
+SRR072239	Even
+SRR072221	Staggered
+SRR072223	Staggered
+SRR072237	Staggered
