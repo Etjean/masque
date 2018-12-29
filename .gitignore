@@ -97,8 +97,7 @@ databases/sh_general_release_dynamic_*
 databases/underhill.fa
 
 # By Etienne
-# test/data/
-test/data_new/
+test/data/
 test/result/
 databases/
 tp/SRR*
