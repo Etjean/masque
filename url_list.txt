@@ -6,8 +6,8 @@ https://unite.ut.ee/sh_files/sh_general_release_s_20.11.2016.zip
 http://www.mothur.org/w/images/2/20/Findley_ITS_database.zip
 https://risccweb.csmc.edu/microbiome/thf/download/THFv1.3.sequence.fasta
 http://drive5.com/uchime/gold.fa
-ftp://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/Assembled_chromosomes/seq/hs_ref_GRCh38.p7_*.fa.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/Assembled_chromosomes/seq/hs_ref_GRCh38.p12_*.fa.gz
 ftp://ftp.ncbi.nlm.nih.gov/genomes/Mus_musculus/Assembled_chromosomes/seq/mm_ref_GRCm38.p4_*.fa.gz
-ftp://ftp.ncbi.nlm.nih.gov/genomes/Danio_rerio/Assembled_chromosomes/seq/dr_ref_GRCz10_*.fa.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/Danio_rerio/Assembled_chromosomes/seq/dr_ref_GRCz11_*.fa.gz
 ftp://ftp.ncbi.nlm.nih.gov/sra/wgs_aux/AL/PR/ALPR02/ALPR02.1.fsa_nt.gz
-ftp://ftp.ncbi.nih.gov/genomes/Viruses/Enterobacteria_phage_phiX174_sensu_lato_uid14015/NC_001422.fna
+ftp://ftp.ncbi.nih.gov/genomes/Viruses/enterobacteria_phage_phix174_sensu_lato_uid14015/NC_001422.fna

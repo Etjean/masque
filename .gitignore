@@ -95,3 +95,11 @@ merge_annotation/
 otu_tab_size/
 databases/sh_general_release_dynamic_*
 databases/underhill.fa
+
+# By Etienne
+test/data/
+test/result/
+databases/
+tp/SRR*
+tp/mock_community*
+

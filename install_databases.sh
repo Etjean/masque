@@ -63,7 +63,8 @@ url_list="$SCRIPTPATH/url_list.txt"
 # Programs #
 ############
 bowtie2_build=$(check_soft "bowtie2-build" "$SCRIPTPATH/bowtie2-2.2.9/bowtie2-build")
-makeblastdb=$(check_soft "makeblastdb" "$SCRIPTPATH/ncbi-blast-2.5.0+/bin/makeblastdb")
+# makeblastdb=$(check_soft "makeblastdb" "$SCRIPTPATH/ncbi-blast-2.5.0+/bin/makeblastdb")  # Problem loading libwritedb.so with this one.
+makeblastdb=makeblastdb  # Using Conda instead
 makembindex=$(check_soft "makembindex" "$SCRIPTPATH/ncbi-blast-2.5.0+/bin/makembindex")
 
 ########
@@ -73,18 +74,18 @@ makembindex=$(check_soft "makembindex" "$SCRIPTPATH/ncbi-blast-2.5.0+/bin/makemb
 say "Start databases preparation for MASQUE"
 wall_time=$(timer)
 
-# Download databases
+# Download database
 say "Download databases: 2.4GB will be download."
 start_time=$(timer)
 wget -i $url_list -P $databases_dir
 say "Elapsed time to download : $(timer $start_time)"
 
 # Check md5sum
-say "Check md5sum"
-start_time=$(timer)
-cd $SCRIPTPATH/databases/ && md5sum -c $md5_check
-cd $SCRIPTPATH/
-say "Elapsed time to check md5 : $(timer $start_time)"
+# say "Check md5sum"
+# start_time=$(timer)
+# cd $SCRIPTPATH/databases/ && md5sum -c $md5_check
+# cd $SCRIPTPATH/
+# say "Elapsed time to check md5 : $(timer $start_time)"
 
 # Decompress database
 say "Decompress databases"
@@ -99,7 +100,7 @@ say "Elapsed time to decompress databases: $(timer $start_time)"
 # Homo sapiens one file
 say "Prepare Homo sapiens database"
 start_time=$(timer)
-cat $databases_dir/hs_ref_GRCh38.p7_*.fa > $databases_dir/homo_sapiens.fna
+cat $databases_dir/hs_ref_GRCh38.p12_*.fa > $databases_dir/homo_sapiens.fna
 say "Elapsed time for Homo sapiens database: $(timer $start_time)"
 
 # Mus musculus one file
@@ -117,7 +118,7 @@ say "Elapsed time for Anopheles stephensi database: $(timer $start_time)"
 # Dario rerio one file
 say "Prepare Dario rerio database"
 start_time=$(timer)
-cat $databases_dir/dr_ref_GRCz10_*.fa  > $databases_dir/danio_rerio.fna
+cat $databases_dir/dr_ref_GRCz11_*.fa  > $databases_dir/danio_rerio.fna
 say "Elapsed time for Dario rerio database: $(timer $start_time)"
 
 
