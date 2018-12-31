@@ -5,7 +5,6 @@ WORKDIR = "$MASQUEDIR/tp/nextflow"
 EXTENSION = '.fastq.gz'
 SAMPLE = 'mock_community'
 fq = Channel.fromPath("$DATADIR/*$EXTENSION")
-// Channel.fromPath("$DATADIR/HMP_MOCK_v35_annotated.fasta").into {db1; db2}
 db = Channel.value(file("$DATADIR/HMP_MOCK_v35_annotated.fasta"))
 sample_type = Channel.fromPath("$WORKDIR/sample_type.txt")
 
@@ -244,10 +243,5 @@ process biom {
 	--output-as-json
 	"""
 }
-
-
-
-
-
 
 
