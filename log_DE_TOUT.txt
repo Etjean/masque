@@ -1,0 +1,249 @@
+# Project name [-n]:
+mydata
+# Sample input [-i]:
+/mydata/
+# Result output [-o]:
+/mydata/result/
+# Number of threads [-t]:
+4 processes will be used
+# Read filtering:
+Minimum read length [--minreadlength]= 35
+Minimum phred quality [--minphred]= 20
+Minimum allowed percentage of correctly called nucleotides [--minphredperc]= 80
+Minimum number of mistach for the filtering [--NbMismatchMapping]= 1
+Filtering databases= human phi
+# OTU process:
+Dereplication is in full length mode
+Minimum length of an amplicon [--minampliconlength]= 64
+Minimum size of an OTU for singleton removal [--minotusize]= 4
+Chimera filtering is in de novo mode
+Clustering is performed with vsearch
+# 16S/18S annotation
+Identity threshold with vsearch [--identityThreshold]= 0.75
+Conserved position for alignment[--conservedPosition]= 0.5
+Tree generated in fast mode with FastTree
+* Start analysis
+* Start working on reads
+* 1/6 - Filter reads against human
+* 1/6 - Elapsed time to filter reads with human reference: 0:00:32
+* 1/6 - Filter reads against phi
+* 1/6 - Elapsed time to filter reads with phi reference: 0:00:02
+* 1/6 - Quality control with Fastqc
+* 1/6 - Elapsed time with Fastqc: 0:00:16
+* 1/6 - Convert fastq to fasta with fastq2fasta
+* 1/6 - Elapsed time with fastq2fasta: 0:00:00
+* 2/6 - Triming reads with Alientrimmer
+* 2/6 - Elapsed time to trim with Alientrimmer: 0:04:53
+* 2/6 - Filter reads against human
+* 2/6 - Elapsed time to filter reads with human reference: 0:00:44
+* 2/6 - Filter reads against phi
+* 2/6 - Elapsed time to filter reads with phi reference: 0:00:05
+* 2/6 - Quality control with Fastqc
+* 2/6 - Elapsed time with Fastqc: 0:00:15
+* 2/6 - Convert fastq to fasta with fastq2fasta
+* 2/6 - Elapsed time with fastq2fasta: 0:00:01
+* 3/6 - Triming reads with Alientrimmer
+* 3/6 - Elapsed time to trim with Alientrimmer: 0:10:10
+* 3/6 - Filter reads against human
+* 3/6 - Elapsed time to filter reads with human reference: 0:00:31
+* 3/6 - Filter reads against phi
+* 3/6 - Elapsed time to filter reads with phi reference: 0:00:01
+* 3/6 - Quality control with Fastqc
+* 3/6 - Elapsed time with Fastqc: 0:00:14
+* 3/6 - Convert fastq to fasta with fastq2fasta
+* 3/6 - Elapsed time with fastq2fasta: 0:00:01
+* 4/6 - Triming reads with Alientrimmer
+* 4/6 - Elapsed time to trim with Alientrimmer: 0:21:53
+* 4/6 - Filter reads against human
+* 4/6 - Elapsed time to filter reads with human reference: 0:00:54
+* 4/6 - Filter reads against phi
+* 4/6 - Elapsed time to filter reads with phi reference: 0:00:15
+* 4/6 - Quality control with Fastqc
+* 4/6 - Elapsed time with Fastqc: 0:00:20
+* 4/6 - Convert fastq to fasta with fastq2fasta
+* 4/6 - Elapsed time with fastq2fasta: 0:00:04
+* 5/6 - Triming reads with Alientrimmer
+* 5/6 - Elapsed time to trim with Alientrimmer: 0:04:00
+* 5/6 - Filter reads against human
+* 5/6 - Elapsed time to filter reads with human reference: 0:00:35
+* 5/6 - Filter reads against phi
+* 5/6 - Elapsed time to filter reads with phi reference: 0:00:02
+* 5/6 - Quality control with Fastqc
+* 5/6 - Elapsed time with Fastqc: 0:00:14
+* 5/6 - Convert fastq to fasta with fastq2fasta
+* 5/6 - Elapsed time with fastq2fasta: 0:00:01
+* 6/6 - Triming reads with Alientrimmer
+* 6/6 - Elapsed time to trim with Alientrimmer: 0:03:12
+* 6/6 - Filter reads against human
+* 6/6 - Elapsed time to filter reads with human reference: 0:00:37
+* 6/6 - Filter reads against phi
+* 6/6 - Elapsed time to filter reads with phi reference: 0:00:03
+* 6/6 - Quality control with Fastqc
+* 6/6 - Elapsed time with Fastqc: 0:00:15
+* 6/6 - Convert fastq to fasta with fastq2fasta
+* 6/6 - Elapsed time with fastq2fasta: 0:00:01
+* Elapsed time with read processing: 0:50:12
+* Combine fasta files
+* Elapsed time to combine fasta files: 0:00:02
+* Dereplication
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /mydata/result//mydata_extendedFrags.fasta 100%  
+188613206 nt in 431037 seqs, min 64, max 602, avg 438
+WARNING: 12617 sequences shorter than 64 nucleotides discarded.
+Dereplicating 100%  
+Sorting 100%
+301504 unique sequences, avg cluster 1.4, median 1, max 3230
+Writing output file 100%  
+* Elapsed time to dereplicate: 0:00:03
+* Abundance sort and discard singletons
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /mydata/result//mydata_drep.fasta 100%  
+136314689 nt in 301504 seqs, min 64, max 602, avg 452
+Getting sizes 100%  
+Sorting 100%
+Median abundance: 6
+Writing output 100%  
+* Elapsed time to sort: 0:00:01
+* Chimera filtering using reference database
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /mydata/result//mydata_sorted.fasta 100%  
+3147721 nt in 7746 seqs, min 64, max 554, avg 406
+Masking 100%  
+Sorting by abundance 100%
+Counting unique k-mers 100%  
+Detecting chimeras 100%  
+Found 104 (1.3%) chimeras, 7606 (98.2%) non-chimeras,
+and 36 (0.5%) borderline sequences in 7746 unique sequences.
+Taking abundance information into account, this corresponds to
+701 (0.6%) chimeras, 116439 (99.1%) non-chimeras,
+and 355 (0.3%) borderline sequences in 117495 total sequences.
+* Elapsed time to filter chimera: 0:00:32
+* OTU clustering with vsearch
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /mydata/result//mydata_nochim.fasta 100%  
+3083095 nt in 7606 seqs, min 64, max 554, avg 405
+Masking 100%  
+Sorting by abundance 100%
+Counting unique k-mers 100%  
+Clustering 100%  
+Sorting clusters 100%
+Writing clusters 100%  
+Clusters: 84 Size min 4, max 30546, avg 90.5
+Singletons: 0, 0.0% of seqs, 0.0% of clusters
+* Elapsed time to OTU clustering with vsearch: 0:00:18
+* Map reads back to OTUs
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /mydata/result//mydata_otu.fasta 100%  
+25748 nt in 84 seqs, min 64, max 553, avg 307
+Masking 100% 
+Counting unique k-mers 100% 
+Creating index of unique k-mers 100% 
+Searching 100%  
+Matching query sequences: 413558 of 443654 (93.22%)
+Writing OTU table (biom 1.0) 100%  
+Writing OTU table (classic) 100%  
+* Elapsed time to map reads: 0:14:28
+* Assign taxonomy with rdp_classifier
+* Elapsed time with rdp_classifier: 0:00:10
+* Assign taxonomy against silva with vsearch
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /usr/local/bin/databases/SILVA_128_SSURef_Nr99_tax_silva.fasta 100%  
+934397294 nt in 645151 seqs, min 900, max 3930, avg 1448
+Masking 100%  
+Counting unique k-mers 100%  
+Creating index of unique k-mers 100%  
+Searching 100%  
+Matching query sequences: 84 of 84 (100.00%)
+* Elapsed time with vsearch: 0:04:42
+* Extract vsearch - silva annotation with get_taxonomy
+* Elapsed time with get_taxonomy: 0:00:08
+* Build vsearch-silva biom
+* Elapsed time to build vsearch-silva biom: 0:00:01
+* Assign taxonomy against greengenes with vsearch
+vsearch v2.3.4_linux_x86_64, 6.8GB RAM, 4 cores
+https://github.com/torognes/vsearch
+
+Reading file /usr/local/bin/databases/gg_13_5.fasta 100%  
+1769520677 nt in 1262986 seqs, min 1111, max 2368, avg 1401
+Masking 100%  
+Counting unique k-mers 100%  
+Creating index of unique k-mers 100%  
+Searching 100%  
+Matching query sequences: 84 of 84 (100.00%)
+* Elapsed time with vsearch: 0:08:46
+* Extract vsearch - greengenes annotation with get_taxonomy
+* Elapsed time with vsearch: 0:00:14
+* Build vsearch-greengenes biom
+* Elapsed time to build vsearch-greengenes biom: 0:00:03
+* Extract OTU annotated with greengenes
+Load the list of sequence of interest ...
+84 sequences to search
+Extract sequences from the catalogue...
+84 extracted sequences
+Write sequences to /mydata/result//mydata_otu_greengenes.fasta
+Done.
+* Elapsed time with extract_fasta: 0:00:00
+* Align OTU annotated with greengenes with mafft
+* Elapsed time with mafft: 0:00:17
+* Cut the alignment with BMGE for greengenes annotation
+   DNA sequence alignment mydata_otu_greengenes.ali
+   before : 84 sequences / 945 characters
+   after :  72 sequences / 189 characters                                                           
+* Elapsed time with BMGE: 0:00:01
+* Compute tree with FastTree greengenes annotation
+* Elapsed time with tree building: 0:00:04
+* Extract OTU annotated with rdp
+Load the list of sequence of interest ...
+83 sequences to search
+Extract sequences from the catalogue...
+83 extracted sequences
+Write sequences to /mydata/result//mydata_otu_rdp.fasta
+Done.
+* Elapsed time with extract_fasta: 0:00:00
+* Align OTU annotated with rdp with mafft
+* Elapsed time with mafft: 0:00:14
+* Cut the alignment with BMGE for rdp annotation
+   DNA sequence alignment mydata_otu_rdp.ali
+   before : 83 sequences / 940 characters
+   after :  71 sequences / 188 characters                                                           
+* Elapsed time with BMGE: 0:00:00
+* Compute tree with FastTree rdp annotation
+* Elapsed time with tree building: 0:00:03
+* Extract OTU annotated with silva
+Load the list of sequence of interest ...
+84 sequences to search
+Extract sequences from the catalogue...
+84 extracted sequences
+Write sequences to /mydata/result//mydata_otu_silva.fasta
+Done.
+* Elapsed time with extract_fasta: 0:00:01
+* Align OTU annotated with silva with mafft
+* Elapsed time with mafft: 0:00:15
+* Cut the alignment with BMGE for silva annotation
+   DNA sequence alignment mydata_otu_silva.ali
+   before : 84 sequences / 945 characters
+   after :  72 sequences / 189 characters                                                           
+* Elapsed time with BMGE: 0:00:00
+* Compute tree with FastTree silva annotation
+* Elapsed time with tree building: 0:00:04
+* Extract MASQUE process results with extract_result
+No file found in /mydata/result/log/log_mapping*2.txt
+No file found in /mydata/result/log/log_mapping*3.txt
+No file found in /mydata/result/log/log_mapping*4.txt
+No file found in /mydata/result/*_unite_annotation_*.tsv
+No file found in /mydata/result/*_findley_annotation_*.tsv
+No file found in /mydata/result/*_underhill_annotation_*.tsv
+* Elapsed time with extract_result: 0:00:24
+* MASQUE analysis is done. Elapsed time: 1:21:03
